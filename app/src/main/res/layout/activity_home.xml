@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.siva.sharepoint_handhelds.Home"
+    android:background="#d3d3d3">
+
+    <FrameLayout android:id="@+id/contentframe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottompanel"
+        android:layout_alignParentTop="true"/>
+
+    <LinearLayout android:id="@+id/bottompanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button android:id="@+id/feed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/buttonbg"
+            android:onClick="buttonClick"
+            android:text="Feed"
+            android:textColor="#ffffff"/>
+
+        <Button android:id="@+id/share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/buttonbg"
+            android:onClick="buttonClick"
+            android:text="Share"
+            android:textColor="#ffffff"/>
+
+        <Button android:id="@+id/profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/buttonbg"
+            android:onClick="buttonClick"
+            android:text="Profile"
+            android:textColor="#ffffff"/>
+
+        <Button android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/buttonbg"
+            android:onClick="buttonClick"
+            android:text="Logout"
+            android:textColor="#ffffff"/>
+
+    </LinearLayout>
+</RelativeLayout>

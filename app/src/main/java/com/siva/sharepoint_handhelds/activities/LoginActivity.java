@@ -25,6 +25,7 @@ import com.siva.sharepoint_handhelds.listeners.OnLoginCheck;
 public class LoginActivity extends AppCompatActivity implements OnLoginCheck{
     EditText etemail, etpassword;
     TextView labelemail, labelpass;
+    public static AppCompatActivity login;
     SharedPreferences spf;
 
     @Override
@@ -32,6 +33,7 @@ public class LoginActivity extends AppCompatActivity implements OnLoginCheck{
     {
         super.onCreate(b);
         setContentView(R.layout.activity_login);
+        login = this;
         spf = getApplicationContext().getSharedPreferences("prefs", Context.MODE_PRIVATE);
         Button loginbtn = (Button) findViewById(R.id.loginbtn);
         etemail = (EditText) findViewById(R.id.etemail);
@@ -43,10 +45,10 @@ public class LoginActivity extends AppCompatActivity implements OnLoginCheck{
 
             @Override
             public void onClick(View v) {
-                if(android.util.Patterns.EMAIL_ADDRESS.matcher(etemail.getText().toString()).matches())
-                    new CheckLogin(etemail.getText().toString(),etpassword.getText().toString(), LoginActivity.this).execute();
+                if (android.util.Patterns.EMAIL_ADDRESS.matcher(etemail.getText().toString()).matches())
+                    new CheckLogin(etemail.getText().toString(), etpassword.getText().toString(), LoginActivity.this).execute();
                 else
-                    Toast.makeText(LoginActivity.this,"Inavalid email format",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Inavalid email format", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -113,5 +115,9 @@ public class LoginActivity extends AppCompatActivity implements OnLoginCheck{
                     labelpass.setVisibility(View.INVISIBLE);
             }
         });
+    }
+
+    public void signUp(View v) {
+        startActivity(new Intent(LoginActivity.this,SignupActivity.class));
     }
 }

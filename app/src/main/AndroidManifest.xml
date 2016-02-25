@@ -16,10 +16,12 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activities.LoginActivity"/>
+        <activity android:name=".activities.LoginActivity"
+            android:launchMode="singleInstance"/>
         <activity android:name=".activities.CommentActivity"/>
         <activity android:name=".activities.ProfileActivity"/>
         <activity android:name=".activities.FullPostActivity"/>
+        <activity android:name=".activities.SignupActivity"/>
     </application>
 
 </manifest>

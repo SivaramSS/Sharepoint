@@ -36,8 +36,10 @@ public class HomeActivity extends AppCompatActivity {
         spf = getApplicationContext().getSharedPreferences("prefs", Context.MODE_PRIVATE);
         boolean loggedin = spf.getBoolean("loggedin",false);
 
-        if(!loggedin)
+        if(!loggedin) {
             startActivity(new Intent(HomeActivity.this, LoginActivity.class));
+            HomeActivity.this.finish();
+        }
         else
         {
             String userid = spf.getString("userid",null);

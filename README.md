@@ -15,7 +15,7 @@ Dowload the project and ensure [NewsGroup](https://github.com/SivaramSS/NewsGrou
 
 ##License
 
-This project is licensed under [Apache 2.0](LICENSE.txt)
+This project is licensed under [Apache 2.0](License.txt)
 
 
 
